@@ -1,4 +1,8 @@
-require 'util/platform'
+begin
+  require 'util/platform'
+rescue LoadError
+  raise 'Cannot load Artix platform utilities!'
+end
 
 module VagrantArtixHost
   module Cap
