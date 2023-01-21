@@ -1,3 +1,8 @@
+# 0.0.2
+
+- Fixed NFS Capability
+- Fixed Import of Platform Utils
+
 # 0.0.1
 
 - Initial Commit
