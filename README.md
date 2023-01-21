@@ -4,7 +4,17 @@ This Ruby Gem enables support for Artix Linux Hosts on Vagrant 2.x.
 
 ### Installing
 
-Currently installation can only be done from source, thus you will need to clone the repository:
+#### Via Vagrant plugin
+
+The plugin is available as a Ruby Gem, thus you should be able to install it using the following command:
+
+```
+vagrant plugin install vagrant-host-artix
+```
+
+#### From Source
+
+To install the plugin from source you will need to clone the repository:
 
 ```
 git clone git@github.com:Penaz91/vagrant-host-artix.git
