@@ -20,7 +20,7 @@ module VagrantArtixHost
     # Defining Host Capabilities
     host_capability(:artixhostplugin, :nfs) do
       require_relative 'cap/nfs'
-      Cap::Nfs
+      Cap::NFS
     end
   end
 end
