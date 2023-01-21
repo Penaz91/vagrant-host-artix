@@ -1,16 +1,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  # TODO: rename name, author, email, description, summary,
-  # license, and homepage
-  gem.name          = "my-vagrant-host-plugin"
+  gem.name          = "vagrant-host-artix"
   gem.version       = File.read('VERSION').chop
-  gem.authors       = ["My Name"]
-  gem.email         = ["myemail@email.com"]
-  gem.description   = "Vagrant host plugin"
-  gem.summary       = "Vagrant host plugin"
+  gem.authors       = ["Daniele Penazzo"]
+  gem.email         = ["penazarea@altervista.org"]
+  gem.description   = "Vagrant host plugin for Artix Linux"
+  gem.summary       = "Adds Artix Linux Host support on Vagrant 2.x"
   gem.license       = 'MIT'
-  gem.homepage      = "https://github.com/hashicorp/vagrant-host-plugin-skeleton-ruby"
+  gem.homepage      = "https://github.com/Penaz91/vagrant-host-artix/"
 
   gem.add_development_dependency "rake", "~> 13.0"
   gem.add_development_dependency "rspec", "~> 3.5.0"
