@@ -1,6 +1,6 @@
 require 'logger'
 
-module MyVagrantHostPlugin
+module VagrantArtixHost
   class Host < Vagrant.plugin("2", :host)
     def detect?(env)
       # TODO: run a command on the host to determine if it is running

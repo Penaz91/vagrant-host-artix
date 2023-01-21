@@ -1,5 +1,5 @@
 require File.expand_path("../../../../lib/host", __FILE__)
 
-describe MyVagrantHostPlugin::Host do
+describe VagrantArtixHost::Host do
   # TODO
 end

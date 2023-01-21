@@ -1,4 +1,4 @@
-module MyVagrantHostPlugin
+module VagrantArtixHost
   module Cap
     class Hello
       def self.hello_command(env)
