@@ -13,12 +13,17 @@ module VagrantArtixHost
     Vagrant Host plugin for Artix Linux
     DESC
 
-    host(:artixhostplugin) do
-      host
+    host(:artixhostplugin, :linux) do
+      Host
     end
 
     # Defining Host Capabilities
-    host_capability(:artixhostplugin, :nfs) do
+    host_capability(:artixhostplugin, 'nfs_check_command') do
+      require_relative 'cap/nfs'
+      Cap::NFS
+    end
+
+    host_capability(:artixhostplugin, 'nfs_start_command') do
       require_relative 'cap/nfs'
       Cap::NFS
     end

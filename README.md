@@ -1,53 +1,36 @@
-# vagrant-host-plugin-ruby-template
+### Artix Linux Host Plugin for Vagrant 2.x
 
-This repo is a template for building a Ruby Vagrant host plugin. Follow the steps to setup your own host plugin!
+This Ruby Gem enables support for Artix Linux Hosts on Vagrant 2.x.
 
-1. Copy this repo. Its a template so follow the Github instructions to [create a repo from a template using the UI](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template), or use the github cli.
+### Installing
+
+Currently installation can only be done from source, thus you will need to clone the repository:
+
 ```
-$ gh repo create vagrant-host-myspecialhost --template hashicorp/vagrant-host-plugin-ruby-template --public
-```
-
-#### Update the gemspec
-2. Update the gemspec. Choose a good, descriptive name for your project. Rename `my-vagrant-host-plugin-ruby-template.gemspec` to reflect this, and fill out the required information.
-
-3. Rename all the references of `my-vagrant-host-plugin-ruby-template.gemspec` to your new name.
-
-#### Update the module
-4. Rename `vagrant-host.rb` to match the name of your plugin and update the contents of the file. This includes updating the module name `MyVagrantHostPlugin`, the name and description fields and the ` host(:myhostplugin) do` line.
-
-5. Rename all the references of `MyVagrantHostPlugin` to your new name.
-
-6. Update the host detection method in `lib/host/host.rb`. This method will be run by Vagrant to determine if the host is running the OS assumed by the plugin.
-
-#### Add capabilities
-7. Add any new capabilities the plugin needs to the `host/cap` module. Be sure to register the capabilities. 
-
-#### Build and install your gem
-8. Commit all your changes if you haven't already. 
-```
-$ git add -A
-$ git commit -m "My Vagrant host plugin"
+git clone git@github.com:Penaz91/vagrant-host-artix.git
 ```
 
-9. Build your plugin
+Then you will need to build the gem manually:
+
 ```
-$ gem build my-vagrant-host-plugin-ruby-template.gemspec 
-  Successfully built RubyGem
-  Name: my-vagrant-host-plugin
-  Version: 0.0.1
-  File: my-vagrant-host-plugin-0.0.1.gem
+cd vagrant-host-artix
+gem build vagrant-host-artix.gemspec
 ```
 
-10. (optional) Push your gem to [RubyGems](https://rubygems.org/)
+After that you can install the plugin:
+
 ```
-$ gem push my-vagrant-host-plugin-0.0.1.gem
+vagrant plugin install vagrant-host-artix-0.0.1.gem
 ```
 
-11. Install your plugin
-```
-# Install from the locally built gem
-$ vagrant plugin install my-vagrant-host-plugin-0.0.1.gem
+### Known Issues
 
-# If you pushed the gem to RubyGems, install from RubyGems
-$ vagrant plugin install my-vagrant-host-plugin
-```
+Some Artix systems may be migrated from Arch Linux. These systems will be detected by the builtin Arch host plugin, due to the presence of the `/etc/arch-release` file. Until this issue isn't fixed upstream, it's suggested to rename or delete such file.
+
+### TODOs
+
+- [x] Testing on OpenRC
+- [ ] Testing on S6
+- [ ] Testing on dinit
+- [ ] Testing on runit
+- [ ] Automated Testing
