@@ -1,14 +1,14 @@
 begin
-  require "vagrant"
+  require 'vagrant'
 rescue LoadError
-  raise "Vagrant is required!"
+  raise 'Vagrant is required!'
 end
 
-require "host/host"
+require 'host/host'
 
 module VagrantArtixHost
-  class Plugin < Vagrant.plugin("2")
-    name "VagrantArtixHost"
+  class Plugin < Vagrant.plugin('2')
+    name 'VagrantArtixHost'
     description <<-DESC
     Vagrant Host plugin for Artix Linux
     DESC

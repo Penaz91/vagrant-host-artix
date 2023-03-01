@@ -30,12 +30,8 @@ gem build vagrant-host-artix.gemspec
 After that you can install the plugin:
 
 ```
-vagrant plugin install vagrant-host-artix-0.0.1.gem
+vagrant plugin install vagrant-host-artix-0.0.3.gem
 ```
-
-### Known Issues
-
-Some Artix systems may be migrated from Arch Linux. These systems will be detected by the builtin Arch host plugin, due to the presence of the `/etc/arch-release` file. Until this issue isn't fixed upstream, it's suggested to rename or delete such file.
 
 ### TODOs
 
