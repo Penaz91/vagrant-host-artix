@@ -1,3 +1,7 @@
+### UNMAINTAINED
+
+After the switch to BSL I decided to not use Vagrant anymore, thus I don't feel the need to maintain this anymore. Feel free to fork the project and improve it if it's useful to you.
+
 ### Artix Linux Host Plugin for Vagrant 2.x
 
 This Ruby Gem enables support for Artix Linux Hosts on Vagrant 2.x.
